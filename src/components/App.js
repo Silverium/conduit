@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Header from './Header';
+import Home from './Home';
 
 const mapStateToPropsAsdf = state => ({
   appName: state.appName
@@ -14,7 +15,7 @@ function App2(props) {
   return (
     <div>
     <Header appName={props.appName} />
-      {props.appName}
+      <Home/>
     </div>);
 }
 // class App extends React.Component {
