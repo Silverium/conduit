@@ -1,31 +1,34 @@
 import React from 'react';
+import { Link } from 'react-router';
 
-function Header2 (props){
-  return (
-    <nav className="navbar navbar-light">
-      <div className="container">
 
-        <a className="navbar-brand">
-          {props.appName.toLowerCase()}
-        </a>
-      </div>
-    </nav>
-  );
+
+class Header extends React.Component {
+  render() {
+    return (
+      <nav className="navbar navbar-light">
+        <div className="container">
+
+          <Link to="/" className="navbar-brand">
+            {this.props.appName.toLowerCase()}
+          </Link>
+          <ul className="nav navbar-nav pull-xs-right">
+            <li className="nav-item">
+              <Link to="/" className="nav-link">
+                Home
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link to="login" className="nav-link">
+                Sign in
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    );
+  }
 }
 
-// class Header extends React.Component {
-//   render() {
-//     return (
-//       <nav className="navbar navbar-light">
-//         <div className="container">
-
-//           <a className="navbar-brand">
-//             {this.props.appName.toLowerCase()}
-//           </a>
-//         </div>
-//       </nav>
-//     );
-//   }
-// }
-
-export default Header2;
+export default Header;
