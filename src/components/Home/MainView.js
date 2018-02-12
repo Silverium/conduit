@@ -3,10 +3,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
-  articles: state.articles
+  articles: state.articles,
+  products: state.products
 });
 
 const MainView = props => {
+  console.log(props)
   return (
     <div className="col-md-9">
       <div className="feed-toggle">

@@ -11,12 +11,15 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   onLoad: (payload) =>
-    dispatch({ type: 'HOME_PAGE_LOADED', payload }),
+    // dispatch({ type: 'HOME_PAGE_LOADED', payload }),
+    dispatch({ type: 'PRODUCTS_LOADED', payload }),
 });
 
 class Home extends React.Component {
   componentWillMount() {
-    this.props.onLoad(agent.Articles.all());
+    // this.props.onLoad(agent.Articles.all());
+    this.props.onLoad(agent.Products.all());
+    // console.log(this.props.products)
   }
 
   render() {
