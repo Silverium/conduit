@@ -5,7 +5,7 @@ const superagent = superagentPromise(_superagent, global.Promise);
 
 const API_ROOT = 'https://conduit.productionready.io/api';
 const API_ROOT_PULLFLOW = 'http://localhost:9000/api';
-const dataContent = res=>res.data.content;
+const dataContent = res=>res.body.content;
 
 const responseBody = res => res.body;
 
